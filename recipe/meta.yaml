@@ -1,5 +1,5 @@
 {% set name = "sorcha" %}
-{% set version = "0.2" %}
+{% set version = "0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sorcha-{{ version }}.tar.gz
-  sha256: 7b1c75e4749d5f572d11d987c41526700d64eabd2865af1497bc22683cea5e2c
+  sha256: 13745868289390f960497827edc8dd879a94d65037a6834ce720fd8f7b438b3e
 
 build:
   entry_points:
