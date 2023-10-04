@@ -9,8 +9,6 @@ Package license: MIT AND GPL-3.0
 
 Summary: The survey simulator post processing code for the LSST
 
-Development: https://github.com/dirac-institute/survey_simulator_post_processing
-
 Current build status
 ====================
 
@@ -146,5 +144,6 @@ Feedstock Maintainers
 =====================
 
 * [@drewoldag](https://github.com/drewoldag/)
+* [@mjuric](https://github.com/mjuric/)
 * [@mschwamb](https://github.com/mschwamb/)
 
