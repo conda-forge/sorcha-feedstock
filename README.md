@@ -3,9 +3,9 @@ About sorcha-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sorcha-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/lsst-sssc/lsstcomet
+Home: https://github.com/dirac-institute/sorcha
 
-Package license: BSD-3-Clause AND GPL-3.0
+Package license: BSD-3-Clause AND GPL-3.0-only
 
 Summary: The survey simulator post processing code for the LSST
 
