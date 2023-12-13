@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/dirac-institute/sorcha/archive/{{ version }}.tar.gz
   sha256: 8f93eb61976f39ac424f118f7881746b1d1b1e03f7f77dc03c30aad615d4185d
-#   path: /Users/mjuric/projects/github.com/mjuric/sorcha
+#    path: /Users/mjuric/projects/github.com/mjuric/sorcha
 
 build:
   entry_points:
