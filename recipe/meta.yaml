@@ -50,10 +50,11 @@ test:
   commands:
     - pip check
     - sorcha --help
-    - makeConfigSorcha --help
-    - makeSLURMscript --help
-    - createResultsSQLDatabase --help
-    - bootstrap_sorcha_data_files --help
+    - sorcha_bootstrap_data_files --help
+    - sorcha_copy_configs  --help
+    - sorcha_copy_demo_files --help
+    - sorcha_create_results_db --help
+    - sorcha_demo_command --help
     - bash -x ./demo/quicktest.sh
   requires:
     - pip
