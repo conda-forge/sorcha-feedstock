@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dirac-institute/sorcha/archive/v{{ version }}.tar.gz
-  sha256: 4dfde5cfaf397ecf99de9b9a3a89feb5a2b1aac5c46a429bfdfb47c4c41524e4
+  sha256: 7940e8e14b74247c88b5c66c0b9fad713c17d69175eb0da8a4706fa8147af1ed
 #   path: /Users/mjuric/projects/github.com/mjuric/sorcha
 
 build:
@@ -58,7 +58,6 @@ test:
     - pip
   source_files:
     - demo/quicktest.sh
-    - data/detectors_corners.csv
     - demo/baseline_v2.0_1yr.db
     - demo/sorcha_config_demo.ini
     - demo/sspp_testset_colours.txt
