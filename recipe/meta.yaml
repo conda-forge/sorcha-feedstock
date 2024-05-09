@@ -42,6 +42,7 @@ requirements:
     - pooch
     - tqdm
     - numba
+    - httpretty # HACK to work around ads package's missing requirement (at least v0.12.4)
 
 test:
   imports:
