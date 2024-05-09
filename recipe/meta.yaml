@@ -9,6 +9,8 @@ source:
   url: https://github.com/dirac-institute/sorcha/archive/v{{ version }}.tar.gz
   sha256: 7940e8e14b74247c88b5c66c0b9fad713c17d69175eb0da8a4706fa8147af1ed
 #   path: /Users/mjuric/projects/github.com/mjuric/sorcha
+  patches:
+    - 0001-demo-quicktest.sh-fix-for-new-command-line-directory.patch
 
 build:
   entry_points:

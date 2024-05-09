@@ -1,0 +1,30 @@
+From b3c8965bc026542c18e38022e54b1f114f94d448 Mon Sep 17 00:00:00 2001
+From: Mario Juric <mjuric@astro.washington.edu>
+Date: Thu, 9 May 2024 16:48:50 -0400
+Subject: [PATCH] demo/quicktest.sh: fix for new command line/directory names
+
+---
+ demo/quicktest.sh | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/demo/quicktest.sh b/demo/quicktest.sh
+index 28efb80..eaec48f 100755
+--- a/demo/quicktest.sh
++++ b/demo/quicktest.sh
+@@ -9,11 +9,11 @@
+ 
+ set -e
+ 
+-test -d data || { echo "$0 must be run from the top-level source code directory"; exit -1; }
++test -d demo || { echo "$0 must be run from the top-level source code directory"; exit -1; }
+ 
+ rm -f quicktest-result.csv
+ 
+-bootstrap_sorcha_data_files
++bootstrap_sorcha_data_files
+ sorcha -c ./demo/sorcha_config_demo.ini -p ./demo/sspp_testset_colours.txt -ob ./demo/sspp_testset_orbits.des -pd ./demo/baseline_v2.0_1yr.db -o ./ -t quicktest-result
+ 
+ # check that the output file size is larger than ~10k
+-- 
+2.39.3 (Apple Git-145)
+
