@@ -6,10 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/mjuric/sorcha/archive/v{{ version }}.tar.gz
-  # curl -L https://github.com/mjuric/sorcha/archive/v0.9.0.tar.gz | openssl sha256
-  sha256: 329200b8d27e625f6e2b301a12242d60bf0808da31abc2039c8946d5309be4eb
-#   path: /Users/mjuric/projects/github.com/mjuric/sorcha
+  url: https://github.com/dirac-institute/sorcha/archive/v{{ version }}.tar.gz
+  # curl -L https://github.com/dirac-institute/sorcha/archive/v0.9.0.tar.gz | openssl sha256
+  sha256: 3a80a0611fa5e6f10d0317609b523756bb855e37cd532ca01e7057f737009bd2
+#  path: /Users/mjuric/projects/github.com/mjuric/sorcha
 
 build:
   entry_points:
