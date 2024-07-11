@@ -1,24 +1,25 @@
 {% set name = "sorcha" %}
-{% set version = "0.6.4" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/dirac-institute/sorcha/archive/v{{ version }}.tar.gz
-  sha256: 7940e8e14b74247c88b5c66c0b9fad713c17d69175eb0da8a4706fa8147af1ed
+  url: https://github.com/mjuric/sorcha/archive/v{{ version }}.tar.gz
+  # curl -L https://github.com/mjuric/sorcha/archive/v0.9.0.tar.gz | openssl sha256
+  sha256: 329200b8d27e625f6e2b301a12242d60bf0808da31abc2039c8946d5309be4eb
 #   path: /Users/mjuric/projects/github.com/mjuric/sorcha
-  patches:
-    - 0001-demo-quicktest.sh-fix-for-new-command-line-directory.patch
 
 build:
   entry_points:
-    - sorcha = sorcha.sorcha:main
-    - makeConfigSorcha = sorcha.utilities.makeConfigPP:main
-    - makeSLURMscript = sorcha.utilities.makeSLURMscript:main
-    - createResultsSQLDatabase = sorcha.utilities.createResultsSQLDatabase:main
-    - bootstrap_sorcha_data_files = sorcha.utilities.retrieve_ephemeris_data_files:main
+    - sorcha = sorcha_cmdline.main:main
+    - sorcha-run = sorcha_cmdline.run:main
+    - sorcha-init = sorcha_cmdline.init:main
+    - sorcha-demo = sorcha_cmdline.demo:main
+    - sorcha-outputs = sorcha_cmdline.outputs:main
+    - sorcha-boostrap = sorcha_cmdline.bootstrap:main
+
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -49,18 +50,15 @@ requirements:
 test:
   imports:
     - sorcha
+    - sorcha_cmdline
   commands:
     - pip check
     - sorcha --help
-#    - sorcha_bootstrap_data_files --help
-#    - sorcha_copy_configs  --help
-#    - sorcha_copy_demo_files --help
-#    - sorcha_create_results_db --help
-#    - sorcha_demo_command --help
-    - makeSLURMscript --help
-    - createResultsSQLDatabase --help
-    - bootstrap_sorcha_data_files --help
-    - sorcha_copy_configs --help    
+    - sorcha run --help
+    - sorcha init --help
+    - sorcha demo --help
+    - sorcha outputs --help
+    - sorcha bootstrap --help
     - bash -x ./demo/quicktest.sh
   requires:
     - pip
