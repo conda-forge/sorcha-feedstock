@@ -1,5 +1,5 @@
 {% set name = "sorcha" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/dirac-institute/sorcha/archive/v{{ version }}.tar.gz
   # curl -L https://github.com/dirac-institute/sorcha/archive/v0.9.0.tar.gz | openssl sha256
-  sha256: 3a80a0611fa5e6f10d0317609b523756bb855e37cd532ca01e7057f737009bd2
+  sha256: f3efe6ac2d0e254cce768b0f1cff05d79f149debe92aa64bf61f6d54756392bf
 #  path: /Users/mjuric/projects/github.com/mjuric/sorcha
 
 build:
@@ -59,15 +59,11 @@ test:
     - sorcha demo --help
     - sorcha outputs --help
     - sorcha bootstrap --help
-    - bash -x ./demo/quicktest.sh
+    - bash -x quicktest.sh
   requires:
     - pip
-  source_files:
-    - demo/quicktest.sh
-    - demo/baseline_v2.0_1yr.db
-    - demo/sorcha_config_demo.ini
-    - demo/sspp_testset_colours.txt
-    - demo/sspp_testset_orbits.des
+  files:
+    - quicktest.sh
 
 about:
   home: https://github.com/dirac-institute/sorcha
