@@ -1,14 +1,14 @@
 {% set name = "sorcha" %}
-{% set version = "0.9.1" %}
+{% set version = "0.9.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/dirac-institute/sorcha/archive/v{{ version }}.tar.gz
+  url: https://github.com/mjuric/sorcha/archive/v{{ version }}.tar.gz
   # curl -L https://github.com/dirac-institute/sorcha/archive/v0.9.0.tar.gz | openssl sha256
-  sha256: f3efe6ac2d0e254cce768b0f1cff05d79f149debe92aa64bf61f6d54756392bf
+  sha256: fbaceab26ab96f5c51811e8f4f4b74100825488fa91059ab630effc201446da2
 #  path: /Users/mjuric/projects/github.com/mjuric/sorcha
 
 build:

@@ -26,10 +26,10 @@ $sorcha_demo
 
 # check that the output file size is larger than ~10k
 # (NOTE: this is just a rough check, we should test against known output here!)
-filesize=$(wc -c testrun_e2e.csv | awk '{print $1}')
+filesize=$(wc -c sorcha-results.csv | awk '{print $1}')
 test $filesize -gt 10000
 
 # check that the stats file exists
-test -f testrun_stats.csv
+test -f sorcha-results-stats.csv
 
 echo "Quick test succesful!"
